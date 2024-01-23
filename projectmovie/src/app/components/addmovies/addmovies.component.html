@@ -1,0 +1,53 @@
+<br>
+<br><br><br>
+<div [hidden]="submitted" style="width: 400px;" class="container">
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="id">Movie Id</label>
+        <input type="text" class="form-control" id="id" required [(ngModel)]="movie.movieId" name="id">
+      </div>
+
+      <div class="form-group">
+        <label for="name">Movie Name</label>
+        <input type="text" class="form-control" id="name" required [(ngModel)]="movie.movieName" name="name">
+      </div>
+
+      <div class="form-group">
+        <label for="time">Duration Time</label>
+        <input type="text" class="form-control" id="time" required [(ngModel)]="movie.durationTime" name="time">
+      </div>
+
+      <div class="form-group">
+        <label for="rate">Movie Rate</label>
+        <input type="text" class="form-control" id="rate" required [(ngModel)]="movie.movieRate" name="rate">
+      </div>
+
+
+      <div class="form-group">
+        <label for="cast">Movie Cast</label>
+        <input type="text" class="form-control" id="cast" required [(ngModel)]="movie.movieCast" name="cast">
+      </div>  
+    <br>
+
+   
+
+      <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+  </div>
+  
+  <div [hidden]="!submitted">
+    <h4>submitted successfully!</h4>
+    
+    <!-- <button class="btn btn-success" (click)="newEmployee()">Add</button> -->
+
+  </div>
+  <br><br><br>
+
+  <div *ngFor="let s of movie.shows">
+    <p>{{s.showId}}</p>
+    <p>{{s.showName}}</p>
+    <p>{{s.paymentType}}</p>
+    <p>{{s.platiniumPrice}}</p>
+    <p>{{s.silverPrice}}</p>
+    <p>{{s.goldPrice}}</p> 
+  </div>

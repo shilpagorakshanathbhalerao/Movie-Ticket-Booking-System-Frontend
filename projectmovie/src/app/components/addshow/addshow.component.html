@@ -1,0 +1,46 @@
+<br>
+<br><br><br>
+<div [hidden]="submitted" style="width: 400px;" class="container">
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="id">Show Id</label>
+        <input type="text" class="form-control" id="id" required [(ngModel)]="show.showId" name="id">
+      </div>
+
+      <div class="form-group">
+        <label for="name">Show Name</label>
+        <input type="text" class="form-control" id="name" required [(ngModel)]="show.showName" name="name">
+      </div>
+
+      <div class="form-group">
+        <label for="pay">Payment Type</label>
+        <input type="text" class="form-control" id="pay" required [(ngModel)]="show.paymentType" name="pay">
+      </div>
+
+      <div class="form-group">
+        <label for="plat">Platinum Price</label>
+        <input type="text" class="form-control" id="plat" required [(ngModel)]="show.platiniumPrice" name="plat">
+      </div>
+
+
+      <div class="form-group">
+        <label for="sil">Silver Price</label>
+        <input type="text" class="form-control" id="sil" required [(ngModel)]="show.silverPrice" name="sil">
+      </div>
+      
+      <div class="form-group">
+        <label for="gol">gold Price</label>
+        <input type="text" class="form-control" id="gol" required [(ngModel)]="show.goldPrice" name="gol">
+      </div>
+  
+      <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+  </div>
+  
+  <div [hidden]="!submitted">
+    <h4>submitted successfully!</h4>
+    
+    <!-- <button class="btn btn-success" (click)="newEmployee()">Add</button> -->
+
+  </div>
+  <br><br><br>

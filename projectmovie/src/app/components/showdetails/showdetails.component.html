@@ -1,0 +1,27 @@
+<h2>Show details</h2>
+<hr>
+<div *ngIf="show">
+  <div>
+    <label><b>Show Id: </b></label> {{show.showId}}
+  </div>
+  <div>
+    <label><b>Show Name: </b></label> {{show.showName}}
+  </div>
+  <div>
+    <label><b>Payment Type: </b></label> {{show.paymentType}}
+  </div>
+  <div>
+    <label><b>Platinum Price: </b></label> {{show.platiniumPrice}}
+  </div>
+  <div>
+    <label><b>Silver Price: </b></label> {{show.silverPrice}}
+  </div>
+  <div>
+    <label><b>Gold Price: </b></label> {{show.goldPrice}}
+  </div> 
+  
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Show List</button><br>

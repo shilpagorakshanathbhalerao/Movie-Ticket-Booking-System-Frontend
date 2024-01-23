@@ -1,0 +1,37 @@
+<br><br><br><br>
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Show List</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Show-Id</th>
+            <th>Show-Name</th>
+            <th>Payment-Type</th>
+            <th>Platinum-Price</th>
+            <th>Silver-Price</th>
+            <th>Gold-Price</th> 
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let s of show |  async" >
+            <td>{{s.showId}}</td>
+            <td>{{s.showName}}</td>
+            <td>{{s.paymentType}}</td>
+            <td>{{s.platiniumPrice}}</td>
+            <td>{{s.silverPrice}}</td>
+            <td>{{s.goldPrice}}</td>
+            <td><button (click)="deleteShow(s.showId)"  class="btn btn-danger">Delete</button>
+            <button (click)="showDetails(s.showId)" class="btn btn-info" style="margin-left: 10px">Details</button>
+            <button (click)="updateDetails(s.showId)" class="btn btn-info" style="margin-left: 10px">Edit</button>
+            
+            
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </div>

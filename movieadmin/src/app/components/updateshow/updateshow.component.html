@@ -1,0 +1,50 @@
+<h3>Update Show Details</h3>
+<div >
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="id">Show Id</label>
+      <input type="text" class="form-control" id="id" 
+      required [(ngModel)]="show.showId" name="id">
+    </div>
+
+    <div class="form-group">
+      <label for="show">Show Name</label>
+      <input type="text" class="form-control" id="show" 
+      
+      required [(ngModel)]="show.showName" name="show">
+    </div>
+
+    
+    <div class="form-group">
+        <label for="payment">Payment Type</label>
+        <input type="text" class="form-control" id="payment" 
+        
+        required [(ngModel)]="show.paymentType" name="payment">
+      </div>
+
+      
+    <div class="form-group">
+        <label for="platinum">Platinum Price</label>
+        <input type="text" class="form-control" id="platinum" 
+        
+        required [(ngModel)]="show.platiniumPrice" name="platinum">
+      </div>
+
+      
+    <div class="form-group">
+        <label for="silverprice">Silver Price</label>
+        <input type="text" class="form-control" id="silverprice" 
+        
+        required [(ngModel)]="show.silverPrice" name="silverprice">
+      </div>
+
+      <div class="form-group">
+        <label for="goldprice">Gold Price</label>
+        <input type="text" class="form-control" id="goldprice" 
+        
+        required [(ngModel)]="show.goldPrice" name="goldprice">
+      </div>
+
+    <button type="submit" class="btn btn-success">Edit</button>
+  </form>
+</div>

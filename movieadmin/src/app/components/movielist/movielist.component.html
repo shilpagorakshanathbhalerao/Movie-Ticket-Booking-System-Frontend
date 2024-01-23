@@ -1,0 +1,35 @@
+<br><br><br><br>
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Movie List</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>movie-Id</th>
+            <th>movie-Name</th>
+            <th>Duration-Time</th>
+            <th>Movie-Rate</th>
+            <th>Movie-Cast</th> 
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let m of movie |  async" >
+            <td>{{m.movieId}}</td>
+            <td>{{m.movieName}}</td>
+            <td>{{m.durationTime}}</td>
+            <td>{{m.movieRate}}</td>
+            <td>{{m.movieCast}}</td>
+            <td><button (click)="deleteMovie(m.movieId)"  class="btn btn-danger">Delete</button>
+            <button (click)="movieDetails(m.movieId)" class="btn btn-info" style="margin-left: 10px">Details</button>
+            <button (click)="updateDetails(m.movieId)" class="btn btn-info" style="margin-left: 10px">Edit</button>
+            
+            
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </div>

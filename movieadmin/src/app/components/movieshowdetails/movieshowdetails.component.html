@@ -1,0 +1,36 @@
+
+<div class="input-group container">
+    <input #movieId type="text" class="form-control rounded" placeholder="Enter id" required name="id" aria-label="Search" aria-describedby="search-addon" />
+    <button type="button" (click)="movieDetails(movieId.value)" class="btn btn-outline-primary" data-mdb-ripple-init>search</button>
+    <button (click)="addShow()" class="btn btn-info" style="margin-left: 10px">Add Show</button>
+    <button (click)="addMovie()" class="btn btn-info" style="margin-left: 10px">Add Movie</button>
+
+</div>
+
+<div *ngIf="visit">
+    <div>
+        <label><b>Movie Id: </b></label> {{movie.movieId}}
+      </div>
+      <div>
+        <label><b>Movie Name: </b></label> {{movie.movieName}}
+      </div>
+      <div>
+        <label><b>Movie Durat   ionTime: </b></label> {{movie.durationTime}}
+      </div>
+      <div>
+        <label><b>Movie Rate: </b></label> {{movie.movieRate}}
+      </div>
+      <div>
+        <label><b>Movie Cast: </b></label> {{movie.movieCast}}
+      </div>
+    
+    <div *ngFor="let s of movie.shows">
+        <p>{{s.showId}}</p>
+        <p>{{s.showName}}</p>
+        <p>{{s.paymentType}}</p>
+        <p>{{s.platiniumPrice}}</p>
+        <p>{{s.silverPrice}}</p>
+        <p>{{s.goldPrice}}</p>
+
+    </div>
+</div>
